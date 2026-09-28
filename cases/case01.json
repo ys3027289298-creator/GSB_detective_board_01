@@ -1,0 +1,29 @@
+{
+  "case_id": "case01",
+  "title": "午夜书房",
+  "culprit_id": "p2",
+  "decisive_clue_id": "e3",
+  "persons": [
+    {"person_id": "p1", "name": "张伟", "role": "suspect"},
+    {"person_id": "p2", "name": "张伟", "role": "suspect"},
+    {"person_id": "p3", "name": "李婷", "role": "witness"}
+  ],
+  "evidence": [
+    {"evidence_id": "e1", "title": "血迹手帕", "description": "书房地毯旁发现", "credibility": 1, "expires_round": null},
+    {"evidence_id": "e2", "title": "破碎的花瓶", "description": "缺口有新鲜划痕", "credibility": 1, "expires_round": null},
+    {"evidence_id": "e3", "title": "匿名字条", "description": "约定午夜在书房见面", "credibility": 1, "expires_round": 3}
+  ],
+  "edges": [],
+  "excluded": [],
+  "testimonies": [
+    {"testimony_id": "t1", "person_id": "p3", "claim": "午夜时 p2 在书房", "contradicts": ["t2"], "status": "pending"},
+    {"testimony_id": "t2", "person_id": "p1", "claim": "午夜时 p2 在花园", "contradicts": ["t1"], "status": "pending"}
+  ],
+  "timeline": [
+    {"event_id": "ev1", "description": "管家最后一次见到受害者", "time": "22:30"},
+    {"event_id": "ev2", "description": "书房传出争吵声", "time": null},
+    {"event_id": "ev3", "description": "午夜钟声响起", "time": "00:00"}
+  ],
+  "round": 0,
+  "state": "active"
+}
